@@ -1,8 +1,8 @@
-Read Me file for react contact form.
+Read Me file for React Contact Form.
 
-Project Name & Pitch
-React Contact Form
+React Contact Form -
 
+Objective:
 Create a reusable React component, that can be used on any website or application to embed a contact form on the page. The form should contain the following fileds:
 
 - Name
@@ -12,7 +12,13 @@ Create a reusable React component, that can be used on any website or applicatio
 
 Project Status: Incomplete
 
-This project is currently in development. Front end development is complete and webpage can be viewed. Backend development still in progress, currently no web server hosting.
+I researched and found code tutorials online and developed from there.
+As I went through the code I literally retyped it and researched as I went.
+This was to ensure I understood what each part did to contribute to the form.
+The front end page will currently run and display with submit button.
+However no data is stored in database, and no notification is sent.
+Now looking to get the back end of the form working by using Apache.
+Need more research in how to integrate this and will update notes as I progress.
 
 Development notes:
 
@@ -28,10 +34,6 @@ Clone repository. You will need node and npm installed globally on your machine.
 Installation:
 
 npm install
-
-To Run Test Suite:
-
-npm test
 
 To Start Server:
 
