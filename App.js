@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_PATH = 'http://localhost:3000/react-contact-form/api/contact/index.php';
+// API localhost location
+
+const API_PATH = 'http://localhost:8080/react-contact-form/api/contact/index.php';
+
+// initial state form input values, changing input will set state to the current input value.
 
 class App extends Component {
     constructor(props) {
@@ -16,6 +20,9 @@ class App extends Component {
             error: null
         }
     }
+
+    // form submit handler method using axios
+
     handleFormSubmit = e => {
         e.preventDefault();
         axios({
@@ -32,6 +39,8 @@ class App extends Component {
             .catch(error => this.setState({ error: error.message }));
     };
 
+    // basic react form. with bindings Make amendments here to change form fields.
+
     render() {
         return (
             <div className="App">
@@ -40,26 +49,26 @@ class App extends Component {
                     <form action="#">
                         <label>Full Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name..."
-                            value={this.state.name}
-                            onChange={e => this.setState({ name: e.target.value })}
+                               value={this.state.name}
+                               onChange={e => this.setState({ name: e.target.value })}
                         />
 
                         <label>Email Address</label>
                         <input type="text" id="email" name="email" placeholder="Your Email..."
-                            value={this.state.email}
-                            onChange={e => this.setState({ email: e.target.value })}
+                               value={this.state.email}
+                               onChange={e => this.setState({ email: e.target.value })}
                         />
                         
                         <label>Telephone Number</label>
                         <input type="text" id="tnumber" name="tnumber" placeholder="Your telephone number..."
-                            value={this.state.tnumber}
-                            onChange={e => this.setState({ tnumber: e.target.value })}
+                               value={this.state.tnumber}
+                               onChange={e => this.setState({ tnumber: e.target.value })}
                         />
 
                         <label>Message</label>
                         <input type="text" id="message" name="message" placeholder="A short message..."
-                            value={this.state.message}
-                            onChange={e => this.setState({ message: e.target.value })}
+                               value={this.state.message}
+                               onChange={e => this.setState({ message: e.target.value })}
                         />
 
                         <input type="submit" onClick={e => this.handleFormSubmit(e)} value="Submit" />
